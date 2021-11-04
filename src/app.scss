@@ -23,11 +23,11 @@ body,
   @include dimensions(100%, 100%);
   .upperdiv {
     @include flexify(row);
-    flex: 1;
+
+    background-color: #14213d;
 
     .editor {
-      border: 1px solid orange;
-      @include dimensions(100%, 100%);
+      @include dimensions(70%, 100%);
       margin-right: 2px;
       margin-left: 2px;
 
@@ -36,31 +36,29 @@ body,
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        background-color: #343a40;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        background-color: #0560bb;
 
         @include dimensions(10%, 100%);
-        h3 {
+        h4 {
           @include dimensions(80%, 10%);
           color: azure;
-        }
-        div {
-          @include dimensions(10px, 10px);
-          border-radius: 50px;
-          background-color: gold;
-          margin-right: 2px;
-          transition: all 1s ease;
-          &:hover {
-            background-color: tomato;
-            cursor: pointer;
-          }
         }
       }
     }
   }
   .downdiv {
     flex: 1;
+
+    div {
+      @include dimensions(10%, 100%);
+      background-color: #0560bb;
+      text-align: center;
+      box-shadow: -3px 5px 12px 0px rgba(0, 0, 0, 0.41);
+
+      h3 {
+        color: azure;
+      }
+    }
     iframe {
       @include dimensions(100%, 100%);
     }
